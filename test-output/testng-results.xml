@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-24T16:15:23 PKT" name="Suite" finished-at="2020-12-24T16:16:06 PKT" duration-ms="42953">
+    <groups>
+    </groups>
+    <test started-at="2020-12-24T16:15:23 PKT" name="Test" finished-at="2020-12-24T16:16:06 PKT" duration-ms="42953">
+      <class name="Tests.LoignWithPIN">
+        <test-method is-config="true" signature="reportsetup(org.testng.ITestContext)[pri:0, instance:Tests.LoignWithPIN@7adda9cc]" started-at="2020-12-24T16:15:23 PKT" name="reportsetup" finished-at="2020-12-24T16:15:23 PKT" duration-ms="274" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@64030b91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportsetup -->
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.LoignWithPIN@7adda9cc]" started-at="2020-12-24T16:15:23 PKT" name="setup" finished-at="2020-12-24T16:15:55 PKT" duration-ms="32193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[R58N208WLTE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Samsung]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login(java.lang.String)[pri:0, instance:Tests.LoignWithPIN@7adda9cc]" started-at="2020-12-24T16:15:55 PKT" name="login" finished-at="2020-12-24T16:16:06 PKT" duration-ms="10715" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[03355298559]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="reportTeardown()[pri:0, instance:Tests.LoignWithPIN@7adda9cc]" started-at="2020-12-24T16:16:06 PKT" name="reportTeardown" finished-at="2020-12-24T16:16:07 PKT" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTeardown -->
+      </class> <!-- Tests.LoignWithPIN -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
