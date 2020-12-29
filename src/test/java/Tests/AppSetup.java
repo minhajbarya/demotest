@@ -16,6 +16,7 @@ public class AppSetup extends ExtentReportsJazzcash{
 	@BeforeTest
 	public void setup(String platform, String udid,String device)  throws MalformedURLException
 	{
+
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
 		desiredCapabilities.setCapability("platformName", "Android");
@@ -24,13 +25,15 @@ public class AppSetup extends ExtentReportsJazzcash{
 		desiredCapabilities.setCapability("udid", udid);
 		desiredCapabilities.setCapability("autoGrantPermissions",true);
 		desiredCapabilities.setCapability("newCommandTimeout","30");
-
-//		desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
+		desiredCapabilities.setCapability("noReset", "true");
+		desiredCapabilities.setCapability("fullReset", "false");
+		//desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
 		desiredCapabilities.setCapability("appPackage", "com.techlogix.mobilinkcustomer");
 		desiredCapabilities.setCapability("appActivity", "com.ibm.jazzcashconsumer.view.splash.SplashActivity");
-		
+
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 		driver = new AppiumDriver<AndroidElement>(url,desiredCapabilities);
 	}
-	
+
+
 }

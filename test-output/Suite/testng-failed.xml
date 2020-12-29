@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test(failed)">
     <parameter name="MSISDN" value="03355298559"/>
     <parameter name="udid" value="R58N208WLTE"/>
     <parameter name="device" value="Samsung"/>
     <parameter name="platform" value="10"/>
     <classes>
-      <class name="Tests.LoignWithPIN">
+      <class name="Tests.MoneyTransfer">
         <methods>
-          <include name="login" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="reportsetup"/>
           <include name="reportTeardown"/>
+          <include name="ClickOnMoneyTransfer"/>
         </methods>
-      </class> <!-- Tests.LoignWithPIN -->
+      </class> <!-- Tests.MoneyTransfer -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
