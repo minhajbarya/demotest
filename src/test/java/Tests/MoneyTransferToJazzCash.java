@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 import io.appium.java_client.MobileElement;
-public class MoneyTransfer extends AppSetup {
+public class MoneyTransferToJazzCash extends AppSetup {
 
 	@Test  (priority = 2)
 	public void ClickOnMoneyTransfer() throws InterruptedException 

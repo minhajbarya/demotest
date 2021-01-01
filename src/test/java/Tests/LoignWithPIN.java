@@ -16,7 +16,7 @@ public class LoignWithPIN  extends AppSetup{
 	@Test  (priority = 1)
 
 	public void login(String MSISDN) throws InterruptedException {
-
+ 
 		test = extent.createTest("Login as customer");
 		test.log(Status.INFO, "Execution Started");
 		test.log(Status.INFO, "App Launched");
@@ -55,9 +55,6 @@ public class LoignWithPIN  extends AppSetup{
 		Thread.sleep(5000);
 		test.log(Status.PASS, "User landed on HomeScreen Sucessfully");
 		
-
-
 	}
-
 }
 
