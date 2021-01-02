@@ -9,7 +9,7 @@
 
 		<classes>
 			<class name="Tests.LoignWithPIN" />
-			<class name="Tests.MoneyTransfer" />
+			<class name="Tests.MoneyTransferToJazzCash" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -7,7 +7,7 @@
     <parameter name="device" value="Samsung"/>
     <parameter name="platform" value="10"/>
     <classes>
-      <class name="Tests.MoneyTransfer">
+      <class name="Tests.MoneyTransferToJazzCash">
         <methods>
           <include name="tearDown"/>
           <include name="reportsetup"/>
@@ -15,7 +15,16 @@
           <include name="getResult"/>
           <include name="ClickOnMoneyTransfer"/>
         </methods>
-      </class> <!-- Tests.MoneyTransfer -->
+      </class> <!-- Tests.MoneyTransferToJazzCash -->
+      <class name="Tests.LoignWithPIN">
+        <methods>
+          <include name="login" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="reportsetup"/>
+          <include name="setup"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tests.LoignWithPIN -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

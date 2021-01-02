@@ -1,8 +1,14 @@
 package Tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -13,6 +19,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
@@ -53,7 +60,6 @@ public class AppSetup{
 		driver = new AppiumDriver<AndroidElement>(url,desiredCapabilities);
 	}
 
-
 	@BeforeSuite
 	public void reportsetup(ITestContext ctx) {
 		suiteName = ctx.getCurrentXmlTest().getSuite().getName();
@@ -70,14 +76,31 @@ public class AppSetup{
 		html.config().setTheme(Theme.DARK);
 	}
 
+
+
+
 	@AfterMethod
 	public void getResult(ITestResult result) throws IOException
 	{
 
+		String methodName=result.getMethod().getMethodName();
 		if(result.getStatus() == ITestResult.FAILURE)
 		{
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
-			test.fail(result.getThrowable());		
+			test.fail(result.getThrowable());
+ 
+			String path=takeScreenshot(result.getMethod().getMethodName());
+			 try {
+				 
+				 test.fail("<b><font color=red>"+"screenshot of failure"+"</font></b>",
+				 MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+			 }
+			 catch(IOException e) {
+				 
+				 test.fail("Test Failed, cannot  attach screenshot");
+				 
+				 
+			 }
 		}
 		else if(result.getStatus() == ITestResult.SUCCESS)
 		{
@@ -89,6 +112,37 @@ public class AppSetup{
 			test.skip(result.getThrowable());
 		}
 	}
+
+
+	public String takeScreenshot(String methodName)
+	{
+
+		String fileName= getScreenshotName(methodName);
+		String directory=System.getProperty("user.dir")+"/screenshot/";
+		new File(directory).mkdirs();
+		String path=directory + fileName;
+
+		try {
+
+			File screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screenshot,new File(path));
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+
+		return path;
+	}
+
+
+	public static  String getScreenshotName(String methodName)
+	{
+		Date D=new Date();
+		String  fileName=methodName + "" + D.toString().replace(":","_").replace(" ", "_")+".png";
+		return fileName;
+	}
+
 	@AfterSuite
 	public void tearDown() 
 	{
