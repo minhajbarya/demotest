@@ -48,10 +48,10 @@ public class AppSetup{
 		desiredCapabilities.setCapability("udid", udid);
 		desiredCapabilities.setCapability("autoGrantPermissions",true);
 		desiredCapabilities.setCapability("newCommandTimeout","30");
-		//		desiredCapabilities.setCapability("noReset", "true");
-		//		desiredCapabilities.setCapability("fullReset", "false");
+		//desiredCapabilities.setCapability("noReset", "true");
+		//desiredCapabilities.setCapability("fullReset", "false");
 		//desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
-		//		desiredCapabilities.setCapability("–session-override",true);
+		//desiredCapabilities.setCapability("–session-override",true);
 
 		desiredCapabilities.setCapability("appPackage", "com.techlogix.mobilinkcustomer");
 		desiredCapabilities.setCapability("appActivity", "com.ibm.jazzcashconsumer.view.splash.SplashActivity");
@@ -88,19 +88,19 @@ public class AppSetup{
 		{
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test case FAILED due to below issues:", ExtentColor.RED));
 			test.fail(result.getThrowable());
- 
+
 			String path=takeScreenshot(result.getMethod().getMethodName());
-			 try {
-				 
-				 test.fail("<b><font color=red>"+"screenshot of failure"+"</font></b>",
-				 MediaEntityBuilder.createScreenCaptureFromPath(path).build());
-			 }
-			 catch(IOException e) {
-				 
-				 test.fail("Test Failed, cannot  attach screenshot");
-				 
-				 
-			 }
+			try {
+
+				test.fail("<b><font color=red>"+"Screenshot of FAILURE"+"</font></b>",
+						MediaEntityBuilder.createScreenCaptureFromPath(path).build());
+			}
+			catch(IOException e) {
+
+				test.fail("Test Failed, cannot  attach screenshot");
+
+
+			}
 		}
 		else if(result.getStatus() == ITestResult.SUCCESS)
 		{

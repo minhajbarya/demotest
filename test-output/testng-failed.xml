@@ -7,18 +7,18 @@
     <parameter name="device" value="Samsung"/>
     <parameter name="platform" value="10"/>
     <classes>
-      <class name="Tests.MoneyTransferToJazzCash">
+      <class name="Tests.MoneyTransferIBFT">
         <methods>
+          <include name="ClickOnMoneyTransfer"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
           <include name="getResult"/>
-          <include name="ClickOnMoneyTransfer"/>
         </methods>
-      </class> <!-- Tests.MoneyTransferToJazzCash -->
+      </class> <!-- Tests.MoneyTransferIBFT -->
       <class name="Tests.LoignWithPIN">
         <methods>
-          <include name="login" invocation-numbers="0"/>
+          <include name="login"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>

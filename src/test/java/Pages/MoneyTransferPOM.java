@@ -13,6 +13,7 @@ public class MoneyTransferPOM {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
+
 	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView"))
 	public AndroidElement SendMoney;
 
@@ -34,8 +35,55 @@ public class MoneyTransferPOM {
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_use_mpin"))
 	public AndroidElement UseMPIM;
 
+	// IBFT Objects
+
+	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.LinearLayout/android.widget.LinearLayout"))
+	public AndroidElement IBFT;
+
+	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView"))
+	public AndroidElement ClickBankName;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_continue"))
+	public AndroidElement AddBankAccountNumber;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/name"))
+	public AndroidElement TransferPurpose;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/skipButton"))
+	public AndroidElement Skip;
 
 
+
+	//Keyboard Object 
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_0"))
+	public AndroidElement Zero;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_1"))
+	public AndroidElement One;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_2"))
+	public AndroidElement Two;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_3"))
+	public AndroidElement Three;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_4"))
+	public AndroidElement Four;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_5"))
+	public AndroidElement Five;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_6"))
+	public AndroidElement Six;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_7"))
+	public AndroidElement Seven;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_8"))
+	public AndroidElement Eight;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_9"))
+	public AndroidElement Nine;
 
 
 }

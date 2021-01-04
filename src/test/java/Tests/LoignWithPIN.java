@@ -1,6 +1,4 @@
 package Tests;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +14,8 @@ public class LoignWithPIN  extends AppSetup{
 	@Test  (priority = 1)
 
 	public void login(String MSISDN) throws InterruptedException {
- 
+		WebDriverWait wait = new WebDriverWait(driver,30);
+
 		test = extent.createTest("Login as customer");
 		test.log(Status.INFO, "Execution Started");
 		test.log(Status.INFO, "App Launched");
@@ -26,11 +25,11 @@ public class LoignWithPIN  extends AppSetup{
 		test.log(Status.PASS, "Clicked on Enter phone number");
 
 		POM.MSISDN.sendKeys(MSISDN);
-		POM.Next.click();
-		Thread.sleep(3000);
-		test.log(Status.PASS, "MSISDN Entered Successfully");
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 
+		POM.Next.click();
+		test.log(Status.PASS, "MSISDN Entered Successfully");
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/t9_key_3")));
 
 		MobileElement el4 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/t9_key_3");
 		el4.click();
@@ -42,7 +41,6 @@ public class LoignWithPIN  extends AppSetup{
 		el7.click();
 		test.log(Status.PASS, "User Logged in Successfully After Valid MPIN");
 
-		WebDriverWait wait = new WebDriverWait(driver,30);
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.TextView")));
 		POM.Next1.click();
@@ -52,9 +50,8 @@ public class LoignWithPIN  extends AppSetup{
 		POM.Next5.click();
 		POM.Gotit.click();
 		POM.Gotit1.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		test.log(Status.PASS, "User landed on HomeScreen Sucessfully");
-		
+
 	}
 }
-

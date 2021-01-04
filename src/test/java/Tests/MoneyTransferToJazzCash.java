@@ -23,7 +23,7 @@ public class MoneyTransferToJazzCash extends AppSetup {
 		test.log(Status.PASS, "Transfer to Mobile Account Clicked successfully");
 
 		POM.SearchNO.click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		POM.SearchNO.sendKeys("03435598382");
 		test.log(Status.PASS, "User Searched from the list successfully");
 
@@ -40,9 +40,9 @@ public class MoneyTransferToJazzCash extends AppSetup {
 		test.log(Status.PASS, "Money Transfered flow initiated successfully");
 
 		POM.AuthoriseTransfer.click(); //Click on Authorize Transfer Button to Continue 
-		test.log(Status.PASS, "Authorise Transfer Successfully");
 
 		POM.UseMPIM.click();    //Select Use MPIN
+		test.log(Status.PASS, "Authorise Transfer Successfully");
 
 		MobileElement el7 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/tv_3");
 		el7.click();
@@ -60,7 +60,7 @@ public class MoneyTransferToJazzCash extends AppSetup {
 		}
 		else
 		{
-			test.log(Status.PASS, "Transaction Failed");
+			test.log(Status.FAIL, "Transaction Failed");
 
 		}
 
