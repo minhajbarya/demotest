@@ -13,7 +13,7 @@ public class MoneyTransferPOM {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-
+	//Transfer to JazzCashAccout
 	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView"))
 	public AndroidElement SendMoney;
 
@@ -44,7 +44,7 @@ public class MoneyTransferPOM {
 	public AndroidElement ClickBankName;
 
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_continue"))
-	public AndroidElement AddBankAccountNumber;
+	public AndroidElement Continue1;
 
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/name"))
 	public AndroidElement TransferPurpose;
@@ -52,7 +52,16 @@ public class MoneyTransferPOM {
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/skipButton"))
 	public AndroidElement Skip;
 
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/doneTV"))
+	public AndroidElement Done;
 
+	//Transfer to CNIC Objects
+
+	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.LinearLayout/android.widget.LinearLayout"))
+	public AndroidElement TCNIC;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/send_text"))
+	public AndroidElement AuthoriseTransfer1;
 
 	//Keyboard Object 
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_0"))
