@@ -5,10 +5,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
-import Pages.LoginPage;
-import io.appium.java_client.MobileElement;
+import Pages.LoginPagePOM;
 public class LoignWithPIN  extends AppSetup{
-
 
 	@Parameters({"MSISDN"})
 	@Test  (priority = 1)
@@ -20,7 +18,7 @@ public class LoignWithPIN  extends AppSetup{
 		test.log(Status.INFO, "Execution Started");
 		test.log(Status.INFO, "App Launched");
 
-		LoginPage POM=new LoginPage(driver);
+		LoginPagePOM POM=new LoginPagePOM(driver);
 		POM.MSISDNField.click();
 		test.log(Status.PASS, "Clicked on Enter phone number");
 
@@ -30,15 +28,12 @@ public class LoignWithPIN  extends AppSetup{
 		test.log(Status.PASS, "MSISDN Entered Successfully");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/t9_key_3")));
+		//Entering MPIN
+		POM.Three.click();
+		POM.Six.click();
+		POM.Nine.click();
+		POM.Eight.click();
 
-		MobileElement el4 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/t9_key_3");
-		el4.click();
-		MobileElement el5 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/t9_key_6");
-		el5.click();
-		MobileElement el6 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/t9_key_9");
-		el6.click();
-		MobileElement el7 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/t9_key_8");
-		el7.click();
 		test.log(Status.PASS, "User Logged in Successfully After Valid MPIN");
 
 

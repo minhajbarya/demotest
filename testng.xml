@@ -6,11 +6,15 @@
 		<parameter name="udid" value="R58N208WLTE" />
 		<parameter name="device" value="Samsung" />
 		<parameter name="MSISDN" value="03355298559" />
+		
 
 		<classes>
 			<class name="Tests.LoignWithPIN" />
-			<class name="Tests.MoneyTransferIBFT" />
-			<class name="Tests.MoneyTransferToCNIC" />
+		<!-- 	<class name="Tests.MoneyTransferIBFT" />
+			<class name="Tests.MoneyTransferToCNIC" /> 
+			<class name="Tests.MoneyTransferToCNIC" /> -->
+<!-- 		 <class name="Tests.PrePaidLoad" />
+ -->
 
 		</classes>
 	</test> <!-- Test -->

@@ -7,24 +7,24 @@
     <parameter name="device" value="Samsung"/>
     <parameter name="platform" value="10"/>
     <classes>
-      <class name="Tests.MoneyTransferIBFT">
+      <class name="Tests.MoneyTransferToCNIC">
         <methods>
-          <include name="ClickOnMoneyTransfer"/>
           <include name="tearDown"/>
+          <include name="TransferToCNIC"/>
           <include name="reportsetup"/>
           <include name="setup"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- Tests.MoneyTransferIBFT -->
-      <class name="Tests.LoignWithPIN">
+      </class> <!-- Tests.MoneyTransferToCNIC -->
+      <class name="Tests.PrePaidLoad">
         <methods>
-          <include name="login"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
           <include name="getResult"/>
+          <include name="PrePaidMobileLoad"/>
         </methods>
-      </class> <!-- Tests.LoignWithPIN -->
+      </class> <!-- Tests.PrePaidLoad -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

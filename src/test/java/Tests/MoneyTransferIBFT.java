@@ -4,15 +4,15 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 
-@Test  (priority = 3)
 
 public class MoneyTransferIBFT extends AppSetup {
+	@Test  (priority = 3)
 
 	public void MoneyTransferToBank() throws InterruptedException 
 	{		
 
 
-		test = extent.createTest("Money Tranfer to Bank Account");
+		test = extent.createTest("Money Tranfer to Bank Account","This test case will Locate and Click Money Transfer icon on Home Screen");
 
 		test.log(Status.INFO, "Execution Started");
 
@@ -85,6 +85,7 @@ public class MoneyTransferIBFT extends AppSetup {
 
 		test.log(Status.PASS, "MPIN Entered Successfully");
 		Thread.sleep(15000);
+		
 		if(driver.findElement(By.id("com.techlogix.mobilinkcustomer:id/textView5")).isDisplayed())
 		{
 			test.log(Status.PASS, "Transaction Successfull");
