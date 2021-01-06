@@ -35,9 +35,9 @@ public class AppSetup{
 	String suiteName;
 	public static ExtentTest test;
 	public static AppiumDriver<AndroidElement> driver;
-	@Parameters({"platform", "udid","device"})
+	@Parameters({"platform", "udid","device","URL_"})
 	@BeforeSuite
-	public void setup(@Optional String platform,@Optional String udid,@Optional String device)  throws MalformedURLException
+	public void setup(@Optional String platform,@Optional String udid,@Optional String device,@Optional String URL_)  throws MalformedURLException
 	{
 
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -56,7 +56,7 @@ public class AppSetup{
 		desiredCapabilities.setCapability("appPackage", "com.techlogix.mobilinkcustomer");
 		desiredCapabilities.setCapability("appActivity", "com.ibm.jazzcashconsumer.view.splash.SplashActivity");
 
-		URL url = new URL("http://127.0.0.1:4723/wd/hub");
+		URL url = new URL("http://"+URL_);
 		driver = new AppiumDriver<AndroidElement>(url,desiredCapabilities);
 	}
 
