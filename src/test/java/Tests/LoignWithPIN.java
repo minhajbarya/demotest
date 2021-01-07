@@ -19,6 +19,8 @@ public class LoignWithPIN  extends AppSetup{
 		test.log(Status.INFO, "App Launched");
 
 		LoginPagePOM POM=new LoginPagePOM(driver);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/et_phone_number")));
+
 		POM.MSISDNField.click();
 		test.log(Status.PASS, "Clicked on Enter phone number");
 

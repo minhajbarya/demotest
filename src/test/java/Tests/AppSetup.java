@@ -12,10 +12,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -26,18 +26,19 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 
 public class AppSetup{
 	public static ExtentHtmlReporter html; 
 	public static ExtentReports extent;
 	String suiteName;
 	public static ExtentTest test;
-	public static AppiumDriver<AndroidElement> driver;
-	@Parameters({"platform", "udid","device","URL_"})
-	@BeforeSuite
-	public void setup(@Optional String platform,@Optional String udid,@Optional String device,@Optional String URL_)  throws MalformedURLException
+	public static AndroidDriver<AndroidElement> driver;
+	@Parameters({"platform", "udid","device","systemPort"})
+	@BeforeTest
+	public void setup(String platform, String udid,String device, String systemPort)  throws MalformedURLException
 	{
 
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -50,14 +51,14 @@ public class AppSetup{
 		desiredCapabilities.setCapability("newCommandTimeout","30");
 		//desiredCapabilities.setCapability("noReset", "true");
 		//desiredCapabilities.setCapability("fullReset", "false");
-		//desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
+		desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
 		//desiredCapabilities.setCapability("–session-override",true);
 
 		desiredCapabilities.setCapability("appPackage", "com.techlogix.mobilinkcustomer");
 		desiredCapabilities.setCapability("appActivity", "com.ibm.jazzcashconsumer.view.splash.SplashActivity");
 
-		URL url = new URL("http://"+URL_);
-		driver = new AppiumDriver<AndroidElement>(url,desiredCapabilities);
+		URL url = new URL("http://127.0.0.1:4723/wd/hub");
+		driver = new AndroidDriver<AndroidElement>(url,desiredCapabilities);
 	}
 
 	@BeforeSuite
@@ -79,7 +80,7 @@ public class AppSetup{
 
 
 
-	@AfterMethod
+	@AfterSuite
 	public void getResult(ITestResult result) throws IOException
 	{
 
@@ -143,7 +144,8 @@ public class AppSetup{
 		return fileName;
 	}
 
-	@AfterSuite
+	@AfterTest
+
 	public void tearDown() 
 	{
 		extent.flush();

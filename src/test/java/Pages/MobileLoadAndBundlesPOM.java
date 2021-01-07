@@ -26,4 +26,43 @@ public class MobileLoadAndBundlesPOM {
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btnSendRupees"))
 	public AndroidElement LoadRS;
 	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_transaction"))
+	public AndroidElement ConfirmTransaction;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_use_mpin"))
+	public AndroidElement UseMPIM;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_done"))
+	public AndroidElement Done;
+	//keyboard objects
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_0"))
+	public AndroidElement Zero;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_1"))
+	public AndroidElement One;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_2"))
+	public AndroidElement Two;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_3"))
+	public AndroidElement Three;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_4"))
+	public AndroidElement Four;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_5"))
+	public AndroidElement Five;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_6"))
+	public AndroidElement Six;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_7"))
+	public AndroidElement Seven;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_8"))
+	public AndroidElement Eight;
+
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_9"))
+	public AndroidElement Nine;
+	
 }
