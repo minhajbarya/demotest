@@ -3,17 +3,16 @@
 <suite thread-count="3" parallel="tests" name="Suite">
 	<test thread-count="3" name="Test">
 		<parameter name="platform" value="10" />
-		<parameter name="udid" value="9FT9K20611904656" />
+		<parameter name="udid" value="9CEBB20710207777" />
 		<parameter name="device" value="SamsungA51" />
 		<parameter name="MSISDN" value="03355298559" />
 		<parameter name="systemPort" value="8205" />
 		<classes>
 			<class name="Tests.LoignWithPIN" />
 			<class name="Tests.PrePaidLoad" />
-
 		</classes>
-	</test> <!-- Test -->
-<!-- 	<test name="Test1">
+	</test> Test
+	<test name="Test1">
 		<parameter name="platform" value="10" />
 		<parameter name="udid" value="RF8NA1XLPWP" />
 		<parameter name="device" value="SamsungA21" />
@@ -24,5 +23,5 @@
 			<class name="Tests.PrePaidLoad" />
 
 		</classes>
-	</test> -->
+	</test>
 </suite> <!-- Suite -->

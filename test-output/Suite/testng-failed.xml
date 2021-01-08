@@ -3,7 +3,7 @@
 <suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="3" parallel="tests" name="Test(failed)">
     <parameter name="MSISDN" value="03355298559"/>
-    <parameter name="udid" value="9FT9K20611904656"/>
+    <parameter name="udid" value="9CEBB20710207777"/>
     <parameter name="device" value="SamsungA51"/>
     <parameter name="platform" value="10"/>
     <parameter name="systemPort" value="8205"/>
@@ -19,7 +19,7 @@
       </class> <!-- Tests.PrePaidLoad -->
       <class name="Tests.LoignWithPIN">
         <methods>
-          <include name="login" invocation-numbers="0"/>
+          <include name="login"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
