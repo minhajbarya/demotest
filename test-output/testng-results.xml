@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="6" passed="0" failed="0" skipped="2">
+<testng-results ignored="4" total="7" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-07T11:42:16 PKT" name="Suite" finished-at="2021-01-07T11:42:46 PKT" duration-ms="29296">
+  <suite started-at="2021-01-11T14:29:13 PKT" name="Suite" finished-at="2021-01-11T14:29:39 PKT" duration-ms="25948">
     <groups>
     </groups>
-    <test started-at="2021-01-07T11:42:16 PKT" name="Test" finished-at="2021-01-07T11:42:46 PKT" duration-ms="29296">
+    <test started-at="2021-01-11T14:29:13 PKT" name="Test2" finished-at="2021-01-11T14:29:19 PKT" duration-ms="5559">
       <class name="Tests.PrePaidLoad">
-        <test-method signature="PrePaidMobileLoad()[pri:5, instance:Tests.PrePaidLoad@7ed7259e]" started-at="2021-01-07T11:42:46 PKT" name="PrePaidMobileLoad" finished-at="2021-01-07T11:42:46 PKT" duration-ms="0" status="SKIP">
+        <test-method signature="PrePaidMobileLoad()[pri:5, instance:Tests.PrePaidLoad@4d9e68d0]" started-at="2021-01-11T14:29:19 PKT" name="PrePaidMobileLoad" finished-at="2021-01-11T14:29:19 PKT" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
@@ -46,7 +46,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileD
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
 at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
-at Tests.AppSetup.setup(AppSetup.java:61)
+at Tests.AppSetup.setup(AppSetup.java:60)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,18 +107,18 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
         </test-method> <!-- PrePaidMobileLoad -->
       </class> <!-- Tests.PrePaidLoad -->
       <class name="Tests.LoignWithPIN">
-        <test-method is-config="true" signature="reportsetup(org.testng.ITestContext)[pri:0, instance:Tests.LoignWithPIN@3d51f06e]" started-at="2021-01-07T11:42:16 PKT" name="reportsetup" finished-at="2021-01-07T11:42:16 PKT" duration-ms="285" status="PASS">
+        <test-method is-config="true" signature="reportsetup(org.testng.ITestContext)[pri:0, instance:Tests.LoignWithPIN@1d9b7cce]" started-at="2021-01-11T14:29:13 PKT" name="reportsetup" finished-at="2021-01-11T14:29:13 PKT" duration-ms="233" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4738a206]]>
+                <![CDATA[org.testng.TestRunner@2c35e847]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportsetup -->
-        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.LoignWithPIN@3d51f06e]" started-at="2021-01-07T11:42:16 PKT" name="setup" finished-at="2021-01-07T11:42:46 PKT" duration-ms="29151" status="FAIL">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.LoignWithPIN@1d9b7cce]" started-at="2021-01-11T14:29:13 PKT" name="setup" finished-at="2021-01-11T14:29:19 PKT" duration-ms="5468" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -127,17 +127,17 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
             </param>
             <param index="1">
               <value>
-                <![CDATA[9CEBB20710207777]]>
+                <![CDATA[RF8NA1XLPWP]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[SamsungA51]]>
+                <![CDATA[Samsung_A21]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[8205]]>
+                <![CDATA[8211]]>
               </value>
             </param>
           </params>
@@ -179,7 +179,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileD
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
 at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
-at Tests.AppSetup.setup(AppSetup.java:61)
+at Tests.AppSetup.setup(AppSetup.java:60)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -238,11 +238,16 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login(java.lang.String)[pri:1, instance:Tests.LoignWithPIN@3d51f06e]" started-at="2021-01-07T11:42:46 PKT" name="login" finished-at="2021-01-07T11:42:46 PKT" duration-ms="0" status="SKIP">
+        <test-method signature="login(java.lang.String, java.lang.String)[pri:1, instance:Tests.LoignWithPIN@1d9b7cce]" started-at="2021-01-11T14:29:19 PKT" name="login" finished-at="2021-01-11T14:29:19 PKT" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[03355298559]]>
+                <![CDATA[03435598382]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung_A21]]>
               </value>
             </param>
           </params>
@@ -284,7 +289,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileD
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
 at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
-at Tests.AppSetup.setup(AppSetup.java:61)
+at Tests.AppSetup.setup(AppSetup.java:60)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -343,14 +348,240 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoignWithPIN@3d51f06e]" started-at="2021-01-07T11:42:46 PKT" name="tearDown" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1610001766282" status="SKIP">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoignWithPIN@1d9b7cce]" started-at="2021-01-11T14:29:19 PKT" name="tearDown" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1610357359470" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Tests.LoignWithPIN@3d51f06e]" started-at="2021-01-07T11:42:46 PKT" name="getResult" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1610001766385" status="SKIP">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Tests.LoignWithPIN@1d9b7cce]" started-at="2021-01-11T14:29:39 PKT" name="getResult" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1610357379933" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
+      </class> <!-- Tests.LoignWithPIN -->
+    </test> <!-- Test2 -->
+    <test started-at="2021-01-11T14:29:13 PKT" name="Test" finished-at="2021-01-11T14:29:39 PKT" duration-ms="25948">
+      <class name="Tests.LoignWithPIN">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.LoignWithPIN@28eaa59a]" started-at="2021-01-11T14:29:13 PKT" name="setup" finished-at="2021-01-11T14:29:39 PKT" duration-ms="25931" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[R58N208WLTE]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Samsung_A51]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[8210]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Original error: Connection reset
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AK-MBL-0009', ip: '10.33.3.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Original error: Connection reset
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AK-MBL-0009', ip: '10.33.3.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at Tests.AppSetup.setup(AppSetup.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
+at org.testng.TestRunner.beforeRun(TestRunner.java:607)
+at org.testng.TestRunner.run(TestRunner.java:578)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 33 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+at java.base/java.net.Socket$SocketInputStream.read(Socket.java:981)
+at okio.Okio$2.read(Okio.java:140)
+at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+at okio.RealBufferedSource.indexOf(RealBufferedSource.java:355)
+at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:227)
+at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:215)
+at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at org.openqa.selenium.remote.internal.OkHttpClient$Factory$1.lambda$createClient$1(OkHttpClient.java:152)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login(java.lang.String, java.lang.String)[pri:1, instance:Tests.LoignWithPIN@28eaa59a]" started-at="2021-01-11T14:29:39 PKT" name="login" finished-at="2021-01-11T14:29:39 PKT" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[03400109118]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung_A51]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Original error: Connection reset
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AK-MBL-0009', ip: '10.33.3.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Original error: Connection reset
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AK-MBL-0009', ip: '10.33.3.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:336)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at Tests.AppSetup.setup(AppSetup.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
+at org.testng.TestRunner.beforeRun(TestRunner.java:607)
+at org.testng.TestRunner.run(TestRunner.java:578)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 33 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+at java.base/java.net.Socket$SocketInputStream.read(Socket.java:981)
+at okio.Okio$2.read(Okio.java:140)
+at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
+at okio.RealBufferedSource.indexOf(RealBufferedSource.java:355)
+at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:227)
+at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:215)
+at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
+at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at org.openqa.selenium.remote.internal.OkHttpClient$Factory$1.lambda$createClient$1(OkHttpClient.java:152)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoignWithPIN@28eaa59a]" started-at="2021-01-11T14:29:39 PKT" name="tearDown" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1610357379865" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Tests.LoignWithPIN -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

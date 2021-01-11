@@ -52,7 +52,6 @@ public class AppSetup{
 		//desiredCapabilities.setCapability("noReset", "true");
 		//desiredCapabilities.setCapability("fullReset", "false");
 		desiredCapabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
-		//desiredCapabilities.setCapability("–session-override",true);
 
 		desiredCapabilities.setCapability("appPackage", "com.techlogix.mobilinkcustomer");
 		desiredCapabilities.setCapability("appActivity", "com.ibm.jazzcashconsumer.view.splash.SplashActivity");

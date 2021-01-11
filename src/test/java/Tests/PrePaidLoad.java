@@ -1,6 +1,5 @@
 package Tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MobileLoadAndBundlesPOM;
@@ -28,14 +27,15 @@ public class PrePaidLoad extends AppSetup{
 
 		POM.Three.click();
 		
-		if(driver.findElements(By.id("com.techlogix.mobilinkcustomer:id/btnSendRupees")).size()>0)
+		if((driver.getPageSource().contains("Success")))
 				 
 				{
-				   System.out.println("The element present");
+			test.log(Status.PASS, "Required element is present");
+
 				}
 		else
 				{
-				   System.out.println("this element is missing");
+			test.log(Status.FAIL, "Required element is missing");
 				}
 		POM.Zero.click();
 		test.log(Status.PASS, "Amount Entered to Send  Sccuessfully");
