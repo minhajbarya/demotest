@@ -1,16 +1,18 @@
 package Tests;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 import io.appium.java_client.MobileElement;
 public class MoneyTransferToJazzCash extends AppSetup {
+	@Parameters({"device"})
 
 	@Test  (priority = 2)
-	public void ClickOnMoneyTransfer() throws InterruptedException 
+	public void ClickOnMoneyTransfer(String device) throws InterruptedException 
 	{
-		test = extent.createTest("Money Tranfer to JazzCash Account");
+		test = extent.createTest("Money Tranfer to JazzCash Account"+ "  ("+"Device Name:"+"  " +device+") ");
 
 		test.log(Status.INFO, "Execution Started");
 

@@ -69,7 +69,7 @@ public class AppSetup{
 		extent.attachReporter(html);
 		extent.setSystemInfo("OS", "Android");
 		extent.setSystemInfo("Host Name", "CashJazz Team");
-		extent.setSystemInfo("Environment", "Production");
+		extent.setSystemInfo("Environment", "Staging");
 
 		html.config().setDocumentTitle("JazzCash Consumer App Report");
 		html.config().setReportName("JazzCash Consumer Automation Test Report");

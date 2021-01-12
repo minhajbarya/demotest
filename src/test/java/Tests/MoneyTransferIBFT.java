@@ -1,21 +1,23 @@
 package Tests;
 import org.openqa.selenium.By;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 
 
 public class MoneyTransferIBFT extends AppSetup {
+	
+	@Parameters({"device"})
 	@Test  (priority = 3)
-
-	public void MoneyTransferToBank() throws InterruptedException 
+	public void MoneyTransferToBank(String device) throws InterruptedException 
 	{		
 
 
-		test = extent.createTest("Money Tranfer to Bank Account","This test case will Locate and Click Money Transfer icon on Home Screen");
+		test = extent.createTest("Money Tranfer to Bank Account"+ "  ("+"Device Name:"+"  " +device+") ");
 
 		test.log(Status.INFO, "Execution Started");
-
+ 
 		MoneyTransferPOM POM=new MoneyTransferPOM(driver);
 		POM.SendMoney.click();
 		test.log(Status.PASS, "Money Transfer is Clicked and the user is inside the menu");

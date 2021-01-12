@@ -1,18 +1,20 @@
 package Tests;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 
-@Test  (priority = 4)
 public class MoneyTransferToCNIC extends AppSetup {
+	@Test  (priority = 4)
+	@Parameters({"device"})
 
-	public void TransferToCNIC() throws InterruptedException 
+	public void TransferToCNIC(String device) throws InterruptedException 
 	{		
 
 
-		test = extent.createTest("Money Tranfer to CNIC");
+		test = extent.createTest("Money Tranfer to CNIC"+ "  ("+"Device Name:"+"  " +device+") ");
 
 		test.log(Status.INFO, "Execution Started");
 

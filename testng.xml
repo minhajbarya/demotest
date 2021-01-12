@@ -4,23 +4,19 @@
 	<test name="Test">
 		<parameter name="platform" value="10" />
 		<parameter name="udid" value="R58N208WLTE" />
-		<parameter name="device" value="Samsung_A51" />
+		<parameter name="device" value="Samsung-A51" />
 		<parameter name="MSISDN" value="03400109118" />
 		<parameter name="systemPort" value="8210" />
 		<classes>
 			<class name="Tests.LoignWithPIN" />
-			<!-- <class name="Tests.PrePaidLoad" /> -->
-		</classes>
-	</test>
-	<test name="Test2">
-		<parameter name="platform" value="10" />
-		<parameter name="udid" value="RF8NA1XLPWP" />
-		<parameter name="device" value="Samsung_A21" />
-		<parameter name="MSISDN" value="03435598382" />
-		<parameter name="systemPort" value="8211" />
-		<classes>
-			<class name="Tests.LoignWithPIN" />
+			<class name="Tests.MoneyTransferIBFT" />
+			<class name="Tests.MoneyTransferToCNIC" />
 			<class name="Tests.PrePaidLoad" />
 		</classes>
 	</test>
+	<!-- <test name="Test2"> <parameter name="platform" value="10" /> <parameter 
+		name="udid" value="RF8NA1XLPWP" /> <parameter name="device" value="Samsung_A21" 
+		/> <parameter name="MSISDN" value="03435598382" /> <parameter name="systemPort" 
+		value="8211" /> <classes> <class name="Tests.LoignWithPIN" /> <class name="Tests.PrePaidLoad" 
+		/> </classes> </test> -->
 </suite> <!-- Suite -->

@@ -1,18 +1,21 @@
 package Tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MobileLoadAndBundlesPOM;
 import io.appium.java_client.MobileBy;
 
-@Test  (priority = 5)
 
 public class PrePaidLoad extends AppSetup{
-	public void PrePaidMobileLoad() throws InterruptedException 
+	@Test  (priority = 5)
+	@Parameters({"device"})
+
+	public void PrePaidMobileLoad(String device) throws InterruptedException 
 	{		
 
 
-		test = extent.createTest("Prepaid Mobile Load");
+		test = extent.createTest("Prepaid Mobile Load"+ "  ("+"Device Name:"+"  " +device+") ");
 		test.log(Status.INFO, "Execution Started");
 
 		MobileLoadAndBundlesPOM POM=new MobileLoadAndBundlesPOM(driver);

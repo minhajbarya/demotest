@@ -6,7 +6,6 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.LoginPagePOM;
-import io.appium.java_client.touch.offset.PointOption;
 public class LoignWithPIN  extends AppSetup{
 
 	@Parameters({"MSISDN","device"})
@@ -15,7 +14,7 @@ public class LoignWithPIN  extends AppSetup{
 	public void login(String MSISDN,String device) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver,30);
 
-		test = extent.createTest("Login as customer"+ " " +device);
+		test = extent.createTest("Login as customer"+ "  ("+"Device Name:"+"  " +device+") ");
 		test.log(Status.INFO, "Execution Started");
 		test.log(Status.INFO, "App Launched");
 
@@ -59,8 +58,5 @@ public class LoignWithPIN  extends AppSetup{
 
 	}
 
-	private PointOption PointOption(int start_x, int start_y) {
-		// TODO Auto-generated method stub
-		return null;
 	}
-}
+

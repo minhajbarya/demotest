@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="Test2(failed)">
-    <parameter name="MSISDN" value="03435598382"/>
-    <parameter name="udid" value="RF8NA1XLPWP"/>
-    <parameter name="device" value="Samsung_A21"/>
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test(failed)">
+    <parameter name="MSISDN" value="03400109118"/>
+    <parameter name="udid" value="R58N208WLTE"/>
+    <parameter name="device" value="Samsung-A51"/>
     <parameter name="platform" value="10"/>
-    <parameter name="systemPort" value="8211"/>
+    <parameter name="systemPort" value="8210"/>
     <classes>
+      <class name="Tests.MoneyTransferToCNIC">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TransferToCNIC" invocation-numbers="0"/>
+          <include name="reportsetup"/>
+          <include name="setup"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Tests.MoneyTransferToCNIC -->
       <class name="Tests.PrePaidLoad">
         <methods>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
           <include name="getResult"/>
-          <include name="PrePaidMobileLoad"/>
+          <include name="PrePaidMobileLoad" invocation-numbers="0"/>
         </methods>
       </class> <!-- Tests.PrePaidLoad -->
-      <class name="Tests.LoignWithPIN">
+      <class name="Tests.MoneyTransferIBFT">
         <methods>
-          <include name="login"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
+          <include name="MoneyTransferToBank" invocation-numbers="0"/>
           <include name="getResult"/>
         </methods>
-      </class> <!-- Tests.LoignWithPIN -->
-    </classes>
-  </test> <!-- Test2(failed) -->
-  <test thread-count="2" parallel="tests" name="Test(failed)">
-    <parameter name="MSISDN" value="03400109118"/>
-    <parameter name="udid" value="R58N208WLTE"/>
-    <parameter name="device" value="Samsung_A51"/>
-    <parameter name="platform" value="10"/>
-    <parameter name="systemPort" value="8210"/>
-    <classes>
+      </class> <!-- Tests.MoneyTransferIBFT -->
       <class name="Tests.LoignWithPIN">
         <methods>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="reportsetup"/>
           <include name="setup"/>
