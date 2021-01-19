@@ -8,43 +8,46 @@ import com.aventstack.extentreports.Status;
 import Pages.LoginPagePOM;
 public class LoignWithPIN  extends AppSetup{
 
-	@Parameters({"MSISDN","device"})
+	@Parameters({"MSISDN"})
 	@Test  (priority = 1)
 
-	public void login(String MSISDN,String device) throws InterruptedException {
+	public void login(String MSISDN) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver,30);
 
-		test = extent.createTest("Login as customer"+ "  ("+"Device Name:"+"  " +device+") ");
-		test.log(Status.INFO, "Execution Started");
-		test.log(Status.INFO, "App Launched");
+//		test = extent.createTest("Login as customer");
+//		test.log(Status.INFO, "Execution Started");
+//		test.log(Status.INFO, "App Launched");
 
 		LoginPagePOM POM=new LoginPagePOM(driver);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/et_phone_number")));
 
 		POM.MSISDNField.click();
+//		test.log(Status.PASS, "Clicked on Enter phone number");
+
 		Thread.sleep(2000);
 
-		test.log(Status.PASS, "Clicked on Enter phone number");
-
+		//Entering MSISDN
 		POM.MSISDN.sendKeys(MSISDN);
 		Thread.sleep(2000);
 
 		POM.Next.click();
 		Thread.sleep(2000);
 
-		test.log(Status.PASS, "MSISDN Entered Successfully");
-		//
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/t9_key_3")));
-		//Entering MPIN
-		POM.Three.click();
-		POM.Six.click();
-		POM.Nine.click();
-		POM.Eight.click();
+//		test.log(Status.PASS, "MSISDN Entered Successfully");
 
-		test.log(Status.PASS, "User Logged in Successfully After Valid MPIN");
-		Thread.sleep(5000);
-		
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.techlogix.mobilinkcustomer:id/t9_key_3")));
+
+		//Entering MPIN
+		POM.One.click();
+		POM.One.click();
+		POM.Two.click();
+		POM.Two.click();
+
+//		test.log(Status.PASS, "User Logged in Successfully After Valid MPIN");
+		Thread.sleep(3000);
+
+		//Clicking on Guided Tour after Login
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.TextView")));
 		POM.Next1.click();
 		POM.Next2.click();
@@ -54,9 +57,20 @@ public class LoignWithPIN  extends AppSetup{
 		POM.Gotit.click();
 		POM.Gotit1.click();
 		Thread.sleep(2000);
-		test.log(Status.PASS, "User landed on HomeScreen Sucessfully");
+//		test.log(Status.FAIL, "User landed on HomeScreen Sucessfully");
+
+//		if((driver.getPageSource().contains("Money Transferrrr")))
+//
+//		{
+//			test.log(Status.PASS, "Money Transfer Is Visible");
+//
+//		}
+//		else
+//		{
+//			test.log(Status.FAIL, "Money Transfer Is Not Visible");
+//		}
 
 	}
 
-	}
+}
 

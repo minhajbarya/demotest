@@ -5,16 +5,17 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 
+@Test  (priority = 3)
 
 public class MoneyTransferIBFT extends AppSetup {
 	
 	@Parameters({"device"})
-	@Test  (priority = 3)
 	public void MoneyTransferToBank(String device) throws InterruptedException 
 	{		
 
 
 		test = extent.createTest("Money Tranfer to Bank Account"+ "  ("+"Device Name:"+"  " +device+") ");
+		test.assignCategory("Money Transfer to IBFT TestCase");
 
 		test.log(Status.INFO, "Execution Started");
  
@@ -80,10 +81,10 @@ public class MoneyTransferIBFT extends AppSetup {
 		POM.AuthoriseTransfer.click();
 		POM.UseMPIM.click();
 
-		POM.Three.click();
-		POM.Six.click();
-		POM.Nine.click();
-		POM.Eight.click();
+		POM.One.click();
+		POM.One.click();
+		POM.Two.click();
+		POM.Two.click();
 
 		test.log(Status.PASS, "MPIN Entered Successfully");
 		Thread.sleep(15000);

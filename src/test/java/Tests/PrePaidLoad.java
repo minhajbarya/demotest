@@ -6,9 +6,9 @@ import com.aventstack.extentreports.Status;
 import Pages.MobileLoadAndBundlesPOM;
 import io.appium.java_client.MobileBy;
 
+@Test  (priority = 5)
 
 public class PrePaidLoad extends AppSetup{
-	@Test  (priority = 5)
 	@Parameters({"device"})
 
 	public void PrePaidMobileLoad(String device) throws InterruptedException 
@@ -16,19 +16,30 @@ public class PrePaidLoad extends AppSetup{
 
 
 		test = extent.createTest("Prepaid Mobile Load"+ "  ("+"Device Name:"+"  " +device+") ");
+		test.assignCategory("Prepaid Load TestCase");
+
 		test.log(Status.INFO, "Execution Started");
 
 		MobileLoadAndBundlesPOM POM=new MobileLoadAndBundlesPOM(driver);
 		POM.Appdrawer.click();
 		driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""+ "Prepaid Load" + "\").instance(0))")).click();
 		test.log(Status.PASS, "Prepaid Load is Clicked and the user is inside the Jazz Section");
+		Thread.sleep(2000);
 
 		POM.SearchMobileNO.click();
+		Thread.sleep(2000);
+
 		POM.SearchMobileNO.sendKeys("03025782949");
+		Thread.sleep(3000);
+
 		POM.SelectNO.click();
+		Thread.sleep(2000);
+
 		test.log(Status.PASS, "Mobile Number Searched and Selected from the List Sccuessfully");
 
 		POM.Three.click();
+		Thread.sleep(2000);
+
 		
 		if((driver.getPageSource().contains("Success")))
 				 
@@ -41,6 +52,8 @@ public class PrePaidLoad extends AppSetup{
 			test.log(Status.FAIL, "Required element is missing");
 				}
 		POM.Zero.click();
+		Thread.sleep(2000);
+
 		test.log(Status.PASS, "Amount Entered to Send  Sccuessfully");
 
 		
@@ -52,10 +65,10 @@ public class PrePaidLoad extends AppSetup{
 
 		
 		//Entering MPIN
-		POM.Three.click();
-		POM.Six.click();
-		POM.Nine.click();
-		POM.Eight.click();
+		POM.One.click();
+		POM.One.click();
+		POM.Two.click();
+		POM.Two.click();
 		test.log(Status.PASS, "MPIN Entered  Sccuessfully");
 		Thread.sleep(3000);
 

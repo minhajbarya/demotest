@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 
+@Test  (priority = 4)
+
 public class MoneyTransferToCNIC extends AppSetup {
-	@Test  (priority = 4)
 	@Parameters({"device"})
 
 	public void TransferToCNIC(String device) throws InterruptedException 
@@ -15,6 +16,7 @@ public class MoneyTransferToCNIC extends AppSetup {
 
 
 		test = extent.createTest("Money Tranfer to CNIC"+ "  ("+"Device Name:"+"  " +device+") ");
+		test.assignCategory("Money Transfer to CNIC TestCase");
 
 		test.log(Status.INFO, "Execution Started");
 
@@ -74,10 +76,10 @@ public class MoneyTransferToCNIC extends AppSetup {
 
 		//Entering User MPIN
 		POM.UseMPIM.click();
-		POM.Three.click();
-		POM.Six.click();
-		POM.Nine.click();
-		POM.Eight.click();
+		POM.One.click();
+		POM.One.click();
+		POM.Two.click();
+		POM.Two.click();
 		test.log(Status.PASS, "MPIN Entered Successfully");
 		Thread.sleep(15000);
 		if(driver.findElement(By.id("com.techlogix.mobilinkcustomer:id/textView5")).isDisplayed())

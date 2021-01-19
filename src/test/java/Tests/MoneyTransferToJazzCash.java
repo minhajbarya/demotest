@@ -1,21 +1,21 @@
 package Tests;
-
-import org.openqa.selenium.By;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import Pages.MoneyTransferPOM;
 import io.appium.java_client.MobileElement;
+
+@Test  (priority = 2)
+
 public class MoneyTransferToJazzCash extends AppSetup {
 	@Parameters({"device"})
 
-	@Test  (priority = 2)
 	public void ClickOnMoneyTransfer(String device) throws InterruptedException 
 	{
 		test = extent.createTest("Money Tranfer to JazzCash Account"+ "  ("+"Device Name:"+"  " +device+") ");
 
 		test.log(Status.INFO, "Execution Started");
-
+		
 		MoneyTransferPOM POM=new MoneyTransferPOM(driver);
 		POM.SendMoney.click();
 
@@ -46,25 +46,14 @@ public class MoneyTransferToJazzCash extends AppSetup {
 		POM.UseMPIM.click();    //Select Use MPIN
 		test.log(Status.PASS, "Authorise Transfer Successfully");
 
-		MobileElement el7 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/tv_3");
-		el7.click();
-		MobileElement el8 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/tv_6");
-		el8.click();
-		MobileElement el9 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/tv_9");
-		el9.click();
-		MobileElement el10 = (MobileElement) driver.findElementById("com.techlogix.mobilinkcustomer:id/tv_8");
-		el10.click();
+		//Entering MPIN
+		POM.One.click();
+		POM.One.click();
+		POM.Two.click();
+		POM.Two.click();
 
-		if(driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/anroid.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.TextView[1]")).isDisplayed())
-		{
-			test.log(Status.PASS, "Transaction Successfull");
-			test.log(Status.PASS, "Money Transffered to JazzCash Account Successfully");
-		}
-		else
-		{
-			test.log(Status.FAIL, "Transaction Failed");
-
-		}
+		POM.Done.click();
+		Thread.sleep(2000);
 
 	}
 
