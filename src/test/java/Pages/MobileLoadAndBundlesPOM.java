@@ -14,8 +14,14 @@ public class MobileLoadAndBundlesPOM {
 	}
 	
 	//Prepaid laod to Jazz
-	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View"))
+	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"))
 	public AndroidElement Appdrawer;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/etSearchApp"))
+	public AndroidElement SearchApp;
+	
+	@AndroidFindBy(uiAutomator="new UiScrollable(new UiSelector()).scrollIntoView(text(\"Prepaid Load\"));")
+	public AndroidElement PrepaidLoad;
 	
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/et_mobileNumber"))
 	public AndroidElement SearchMobileNO;
@@ -34,6 +40,39 @@ public class MobileLoadAndBundlesPOM {
 	
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_done"))
 	public AndroidElement Done;
+	
+	//Mobile Bundles Objects
+	
+	@AndroidFindBy(xpath=("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/android.widget.RelativeLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[2]/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.TextView[5]"))
+	public AndroidElement SubscribeBundle;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_number"))
+	public AndroidElement RecipientMobileNumber;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_continue"))
+	public AndroidElement ConfirmNumber;
+	
+	
+	//Utility Bills
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/et_search"))
+	public AndroidElement SearchServiceProvider;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_reference_no"))
+	public AndroidElement BillReferenceNo;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_fetch_bill"))
+	public AndroidElement FetchBill;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btn_positive"))
+	public AndroidElement Okay;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/iv_close"))
+	public AndroidElement Close;
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/tv_title"))
+	public AndroidElement PTCLClick;
+	
 	//keyboard objects
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_0"))
 	public AndroidElement Zero;
@@ -65,4 +104,8 @@ public class MobileLoadAndBundlesPOM {
 	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/t9_key_9"))
 	public AndroidElement Nine;
 	
+	
+	@AndroidFindBy(id=("com.techlogix.mobilinkcustomer:id/btnEditJazzCash"))
+	public AndroidElement Visibility;
+
 }
